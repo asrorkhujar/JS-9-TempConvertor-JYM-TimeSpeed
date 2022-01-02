@@ -66,7 +66,7 @@ const elOutputTemp = elFormTemp.querySelector('.js-output-temperature');
 
 //Selsiydan Farengeytga o'tkazuvchi funksiya
 const displayTempResault = function () {
-  let celsius = Number(elTempInput.value);
+  let celsius = Number(elTempInput.value.trim());
   let celsiusToFahranheit = (celsius * 9) / 5 + 32;
   elOutputTemp.textContent = `${celsiusToFahranheit} °F`
 }
@@ -83,3 +83,57 @@ elTempInput.addEventListener('keyup', () => {
 
 
 //VAZIFA-3 YUGURUSHGA CHIQISH
+
+let elFormRun = document.querySelector('.js-form-go-run');
+let elFormRunInput = elFormRun.querySelector('.js-form-go-run-input');
+let elCheckboxRain = elFormRun.querySelector('.checkbox-rain');
+let elCheckboxJym = elFormRun.querySelector('.checkbox-jym');
+
+let elDisplayResault = document.querySelector('.js-result-go-run');
+let elResaultYes = elDisplayResault.querySelector('.yes');
+let elResaultNo = elDisplayResault.querySelector('.no');
+
+//Formani ketib qolishini oldini olamiz
+elFormRun.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+});
+
+elFormRun.addEventListener('change', function () {
+  let runTemperature = Number(elFormRunInput.value.trim());
+  elResaultYes.classList.remove('text-success');
+  elResaultNo.classList.remove('text-danger');
+
+  if (runTemperature >= 5 && runTemperature <= 30) {
+    elResaultNo.classList.remove('text-danger');
+    elResaultYes.classList.add('text-success');
+  } else if (runTemperature < 5) {
+    elResaultYes.classList.remove('text-success');
+    elResaultNo.classList.add('text-danger');
+  } else if (elCheckboxRain.checked) {
+    elResaultYes.classList.remove('text-success');
+    elResaultNo.classList.add('text-danger');
+  } else if (elCheckboxRain.checked && runTemperature >= 5) {
+    elResaultNo.classList.add('text-danger');
+    elResaultYes.classList.remove('text-success');
+  } else if (elCheckboxRain.checked && elCheckboxJym.checked) {
+    elResaultNo.classList.remove('text-danger');
+    elResaultYes.classList.add('text-success');
+  } else if (runTemperature < 5 && elCheckboxJym.checked) {
+    elResaultNo.classList.add('text-danger');
+    elResaultYes.classList.remove('text-success');
+  } else if (elCheckboxJym.checked) {
+    elResaultYes.classList.add('text-success');
+    elResaultNo.classList.remove('text-danger');
+  } else if (elCheckboxJym.checked && elCheckboxRain.checked && runTemperature < 5) {
+    elResaultYes.classList.remove('text-success');
+    elResaultNo.classList.add('text-danger');
+  } else if (runTemperature === 0) {
+    elResaultYes.classList.remove('text-success');
+    elResaultNo.classList.remove('text-danger');
+  } else if (runTemperature === '') {
+    elResaultYes.classList.remove('text-success');
+    elResaultNo.classList.remove('text-danger');
+  } else {
+    // elResaultNo.classList.add('text-danger');
+  }
+});
