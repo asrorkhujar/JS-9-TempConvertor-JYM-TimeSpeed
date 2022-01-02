@@ -103,37 +103,34 @@ elFormRun.addEventListener('change', function () {
   elResaultYes.classList.remove('text-success');
   elResaultNo.classList.remove('text-danger');
 
-  if (runTemperature >= 5 && runTemperature <= 30) {
-    elResaultNo.classList.remove('text-danger');
-    elResaultYes.classList.add('text-success');
-  } else if (runTemperature < 5) {
+  if (runTemperature < 5) {
     elResaultYes.classList.remove('text-success');
     elResaultNo.classList.add('text-danger');
+  } else if (elCheckboxJym.checked && elCheckboxRain.checked && runTemperature >= 5 && runTemperature <= 30) {
+    elResaultNo.classList.remove('text-danger');
+    elResaultYes.classList.add('text-success');
   } else if (elCheckboxRain.checked) {
     elResaultYes.classList.remove('text-success');
     elResaultNo.classList.add('text-danger');
-  } else if (elCheckboxRain.checked && runTemperature >= 5) {
+  } else if (runTemperature >= 5 && elCheckboxRain.checked) {
     elResaultNo.classList.add('text-danger');
     elResaultYes.classList.remove('text-success');
-  } else if (elCheckboxRain.checked && elCheckboxJym.checked) {
-    elResaultNo.classList.remove('text-danger');
-    elResaultYes.classList.add('text-success');
   } else if (runTemperature < 5 && elCheckboxJym.checked) {
     elResaultNo.classList.add('text-danger');
     elResaultYes.classList.remove('text-success');
-  } else if (elCheckboxJym.checked) {
-    elResaultYes.classList.add('text-success');
-    elResaultNo.classList.remove('text-danger');
   } else if (elCheckboxJym.checked && elCheckboxRain.checked && runTemperature < 5) {
-    elResaultYes.classList.remove('text-success');
     elResaultNo.classList.add('text-danger');
+    elResaultYes.classList.remove('text-success');
   } else if (runTemperature === 0) {
     elResaultYes.classList.remove('text-success');
     elResaultNo.classList.remove('text-danger');
   } else if (runTemperature === '') {
     elResaultYes.classList.remove('text-success');
     elResaultNo.classList.remove('text-danger');
+  } else if (runTemperature >= 5 && runTemperature <= 30) {
+    elResaultNo.classList.remove('text-danger');
+    elResaultYes.classList.add('text-success');
   } else {
-    // elResaultNo.classList.add('text-danger');
+    elResaultNo.classList.add('text-danger');
   }
 });
