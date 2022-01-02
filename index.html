@@ -13,19 +13,20 @@
 <body>
   <div class="container-lg">
     <!-- Kim birinchi borishga -->
-    <section class="d-flex flex-column align-items-center mb-5">
-      <h2 class="text-center text-white fw-bold display-4 my-4 px-5 py-2 bg-warning rounded-3">Kim birinchi
+    <section class="d-flex flex-column align-items-center p-5 bg-dark">
+      <h2 class="text-center text-white fw-bold display-5 my-4 px-5 py-2 bg-warning rounded-3">Kim birinchi
         borishga 😎
       </h2>
       <form class="js-form-race form" id="formRace" action="https://echo.htmlacademy.ru" method="POST">
         <div class="row text-center">
           <div class="col-md-6 d-flex align-items-center">
-            <span class="me-4 h5 mb-1">Masofa</span>
-            <input class="form-control js-form-amount" type="number" min="0" placeholder="100km" id="inputAmountRace"
+            <span class="me-4 h5 mb-1 text-white">Masofa</span>
+            <input class="form-control js-form-amount" type="number" min="0" placeholder="100 km" id="inputAmountRace"
               step="any" required>
           </div>
           <div class="col-md-6 mt-4 mt-md-0">
-            <button class="btn btn-success js-form-btn w-100 fw-bold" type="submit" id="formSubmitRace">Natija</button>
+            <button class="btn btn-outline-warning js-form-btn w-100 fw-bold" type="submit"
+              id="formSubmitRace">Natija</button>
           </div>
         </div>
 
@@ -35,7 +36,7 @@
               <img src="/img/walking-solid.svg" class="card-img-top" alt="icon walking man" width="100" height="100">
               <div class="card-body text-center">
                 <p class="card-text fw-bold h5 text-center">Piyoda</p>
-                <span class="result-foot h5 text-success">N soat</span>
+                <span class="result-foot h5 text-warning">N soat</span>
               </div>
             </div>
           </div>
@@ -44,7 +45,7 @@
               <img src="/img/bicycle-solid.svg" class="card-img-top" alt="icon walking man" width="100" height="100">
               <div class="card-body text-center">
                 <p class="card-text fw-bold h5 text-center">Velosiped</p>
-                <span class="result-bike h5 text-success">N soat</span>
+                <span class="result-bike h5 text-warning">N soat</span>
               </div>
             </div>
           </div>
@@ -53,7 +54,7 @@
               <img src="/img/car-side-solid.svg" class="card-img-top" alt="icon walking man" width="100" height="100">
               <div class="card-body text-center">
                 <p class="card-text fw-bold h5 text-center">Mashina</p>
-                <span class="result-car h5 text-success">N soat</span>
+                <span class="result-car h5 text-warning">N soat</span>
               </div>
             </div>
           </div>
@@ -62,7 +63,7 @@
               <img src="/img/plane-solid.svg" class="card-img-top" alt="icon walking man" width="100" height="100">
               <div class="card-body text-center">
                 <p class="card-text fw-bold h5 text-center">Samolyot</p>
-                <span class="result-plane h5 text-success">N soat</span>
+                <span class="result-plane h5 text-warning">N soat</span>
               </div>
             </div>
           </div>
@@ -73,9 +74,9 @@
     <hr>
 
     <!-- TEMPERATURA-CONVERTOR -->
-    <section class="mt-5">
+    <section class="py-5 bg-info">
       <div class="mb-5 text-secondary fw-bold">
-        <h2 class="mb-5 text-danger text-center fw-bolder">Temperatura Konvertori</h2>
+        <h2 class="mb-5 text-white text-center fw-bolder">Temperatura Konvertori</h2>
         <form class="js-form-temp form w-75 mb-3 mx-auto bg-light p-3" action="https://echo.htmlacademy.ru"
           method="POST">
 
@@ -97,8 +98,8 @@
     <hr>
 
     <!-- YUGURUSHGA CHIQISH -->
-    <section class="mt-5">
-      <h2 class="text-center text-primary">Yugurushga chiqamizmi?</h2>
+    <section class="py-5 bg-warning">
+      <h2 class="text-center text-white">Yugurushga chiqamizmi?</h2>
       <p class="js-result-go-run text-center h1 mb-3">
         <span class="yes fw-bold">HA</span> / <span class="no fw-bold">YO'Q</span>
       </p>
