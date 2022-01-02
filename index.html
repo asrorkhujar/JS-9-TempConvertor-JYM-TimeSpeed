@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS-9 | APP</title>
+  <link rel="stylesheet" href="css/bootstrap5.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="container-lg">
+    <!-- Kim birinchi borishga -->
+    <section class="d-flex flex-column align-items-center mb-5">
+      <h2 class="text-center text-white fw-bold display-4 my-4 px-5 py-2 bg-warning rounded-3">Kim birinchi
+        borishga 😎
+      </h2>
+      <form class="js-form-race form" id="formRace" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="row text-center">
+          <div class="col-md-6 d-flex align-items-center">
+            <span class="me-4 h5 mb-1">Masofa</span>
+            <input class="form-control js-form-amount" type="number" min="0" placeholder="100km" id="inputAmountRace"
+              step="any" required>
+          </div>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <button class="btn btn-success js-form-btn w-100 fw-bold" type="submit" id="formSubmitRace">Natija</button>
+          </div>
+        </div>
+
+        <div class="row mt-4 text-secondary">
+          <div class="col-md-6 mt-4">
+            <div class="card p-3 shadow-sm">
+              <img src="/img/walking-solid.svg" class="card-img-top" alt="icon walking man" width="100" height="100">
+              <div class="card-body text-center">
+                <p class="card-text fw-bold h5 text-center">Piyoda</p>
+                <span class="result-foot h5 text-success">N soat</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="card p-3 shadow-sm">
+              <img src="/img/bicycle-solid.svg" class="card-img-top" alt="icon walking man" width="100" height="100">
+              <div class="card-body text-center">
+                <p class="card-text fw-bold h5 text-center">Velosiped</p>
+                <span class="result-bike h5 text-success">N soat</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="card p-3 shadow-sm">
+              <img src="/img/car-side-solid.svg" class="card-img-top" alt="icon walking man" width="100" height="100">
+              <div class="card-body text-center">
+                <p class="card-text fw-bold h5 text-center">Mashina</p>
+                <span class="result-car h5 text-success">N soat</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="card p-3 shadow-sm">
+              <img src="/img/plane-solid.svg" class="card-img-top" alt="icon walking man" width="100" height="100">
+              <div class="card-body text-center">
+                <p class="card-text fw-bold h5 text-center">Samolyot</p>
+                <span class="result-plane h5 text-success">N soat</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- TEMPERATURA-CONVERTOR -->
+    <section class="mt-5">
+      <div class="mb-5 text-secondary fw-bold">
+        <h2 class="mb-5 text-danger text-center fw-bolder">Temperatura Konvertori</h2>
+        <form class="js-form-temp form w-75 mb-3 mx-auto bg-light p-3" action="https://echo.htmlacademy.ru"
+          method="POST">
+
+          <div class="form-group mb-4">
+            <label class="m-0 mb-3 pl-0" for="celcy-input">Selsiyda (C)</label>
+            <input class="form-control js-form-celcy-input" type="number" id="celcy-input" name="celcy"
+              placeholder="0°C" step="any" required>
+          </div>
+
+          <div class="d-flex align-items-center mb-4">
+            <output class="js-output-temperature px-2">?° F</output>
+          </div>
+
+          <button class="btn btn-success d-block w-100 mb-2" type="submit">OK</button>
+        </form>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- YUGURUSHGA CHIQISH -->
+    <section class="mt-5">
+      <h2 class="text-center text-primary">Yugurushga chiqamizmi?</h2>
+      <p class="result-go-run text-center h1 mb-3">
+        <span class="yes fw-bold">HA</span> / <span class="no fw-bold">YO'Q</span>
+      </p>
+      <form class="form-go-run form d-flex flex-column align-items-center" action="https://echo.htmlacademy.ru"
+        method="POST">
+        <div>
+          <div class="form-group d-flex align-items-center">
+            <label class="me-3 mb-0 h5">Havo harorati</label>
+            <input class="js-form-go-run-input form-control w-50" type="number" step="any" placeholder="°C"
+              name="temperature">
+          </div>
+          <div class="form-check mt-3">
+            <label for="rain"><input class="checkbox-rain form-check-input" type="checkbox" id="rain"
+                name="rain-checkbox">Yomg'ir yog'ayaptimi?</label>
+          </div>
+          <div class="form-check mt-3">
+            <label for="jym"><input class="checkbox-jym form-check-input" type="checkbox" id="jym"
+                name="jym-checkbox">Sport zal ochiqmi?</label>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+  <script src="js/bootstrap5.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
